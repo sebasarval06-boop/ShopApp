@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:handlers="clr-namespace:ShopApp.Handlers"
+             x:Class="ShopApp.Views.ProductPage"
+             Title="ProductPage">
+
+    <Shell.SearchHandler>
+        <handlers:ProductoBusquedaHandler 
+            Placeholder="Buscar producto..."
+            ShowsResults="True"
+            DisplayMemberName="Nombre" />
+    </Shell.SearchHandler>
+
+    <ScrollView>
+        <VerticalStackLayout x:Name="container" Padding="20" Spacing="10">
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

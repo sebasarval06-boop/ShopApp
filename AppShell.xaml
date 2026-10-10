@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShopApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:ShopApp.Views"
+    xmlns:local="clr-namespace:ShopApp"
+    Title="ShopApp"
+    Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem Title="Configuración">
+
+        <Tab Title="Resumen">
+            <ShellContent
+                Title="Inicio"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+
+        <Tab Title="Productos">
+            <ShellContent
+                Title="Productos"
+                ContentTemplate="{DataTemplate views:ProductPage}"
+                Route="ProductPage" />
+        </Tab>
+
+    </FlyoutItem>
+
+</Shell>

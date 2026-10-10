@@ -1,0 +1,85 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ShopApp
+build_property.ProjectDir = C:\Users\Samsung\source\repos\ShopApp\ShopApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/Views/CategoryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.Views.CategoryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CategoryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CategoryPage.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/Views/ClientPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.Views.ClientPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ClientPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ClientPage.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/Views/HelpSupportDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.Views.HelpSupportDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HelpSupportDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HelpSupportDetailPage.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/Views/HelpSupportPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.Views.HelpSupportPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HelpSupportPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HelpSupportPage.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/Views/ProductDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.Views.ProductDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ProductDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ProductDetailPage.xaml
+
+[C:/Users/Samsung/source/repos/ShopApp/ShopApp/Views/ProductPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ShopApp.Views.ProductPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ProductPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ProductPage.xaml

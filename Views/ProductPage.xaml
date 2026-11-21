@@ -1,19 +1,60 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:handlers="clr-namespace:ShopApp.Handlers"
-             x:Class="ShopApp.Views.ProductPage"
-             Title="ProductPage">
 
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:handlers="clr-namespace:ShopApp.Handlers"
+    x:Class="ShopApp.Views.ProductPage"
+    Title="Productos">
+
+    <!-- Buscador de productos -->
     <Shell.SearchHandler>
-        <handlers:ProductoBusquedaHandler 
-            Placeholder="Buscar producto..."
-            ShowsResults="True"
-            DisplayMemberName="Nombre" />
+        <handlers:ProductoBusquedaHandler
+        Placeholder="Buscar producto..."
+        ShowsResults="True">
+
+            <handlers:ProductoBusquedaHandler.ItemTemplate>
+                <DataTemplate>
+                    <Label
+                    Text="{Binding Nombre}"
+                    Padding="10"
+                    FontSize="16" />
+                </DataTemplate>
+            </handlers:ProductoBusquedaHandler.ItemTemplate>
+
+        </handlers:ProductoBusquedaHandler>
     </Shell.SearchHandler>
 
-    <ScrollView>
-        <VerticalStackLayout x:Name="container" Padding="20" Spacing="10">
-        </VerticalStackLayout>
-    </ScrollView>
+    <Grid Padding="20"
+          RowDefinitions="Auto,*"
+          RowSpacing="15">
+
+        <!-- Título -->
+        <Label
+            Grid.Row="0"
+            Text="Catálogo de productos"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <!-- Lista de productos -->
+        <CollectionView
+            x:Name="productosCollection"
+            Grid.Row="1"
+            ItemTemplate="{StaticResource ProductDataTemplate}"
+            SelectionMode="Single"
+            SelectionChanged="ProductosCollection_SelectionChanged">
+
+            <CollectionView.EmptyView>
+                <Label
+                    Text="No hay productos disponibles."
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="16" />
+            </CollectionView.EmptyView>
+
+        </CollectionView>
+
+    </Grid>
+
 </ContentPage>

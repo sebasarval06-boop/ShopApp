@@ -1,4 +1,4 @@
-using ShopApp.DataAcces; // <--- Cambiar 'DataAccess' por 'DataAcces' (una 's')
+using ShopApp.DataAcces;
 
 namespace ShopApp.Views;
 
@@ -9,22 +9,48 @@ public partial class ProductDetailPage : ContentPage, IQueryAttributable
         InitializeComponent();
     }
 
-    public void ApplyQueryAttributes(IDictionary<string, object> query)
+
+    public void ApplyQueryAttributes(
+        IDictionary<string, object> query)
     {
-        if (query.ContainsKey("id"))
+        // Verificar que recibimos un ID válido
+        if (!query.TryGetValue("id", out var idObj) ||
+            !int.TryParse(idObj?.ToString(), out int id))
         {
-            var id = int.Parse(query["id"].ToString());
+            return;
+        }
 
-            using var dbContext = new ShopDbContext();
-            var producto = dbContext.Products.FirstOrDefault(x => x.Id == id);
+        // Buscar el producto por su ID
+        using var dbContext = new ShopDbContext();
 
-            if (producto != null)
-            {
-                container.Children.Clear();
-                container.Children.Add(new Label { Text = producto.Nombre, FontSize = 22 });
-                container.Children.Add(new Label { Text = producto.Descripcion });
-                container.Children.Add(new Label { Text = $"Precio: {producto.Precio}" });
-            }
+        var producto = dbContext.Products
+            .FirstOrDefault(x => x.Id == id);
+
+        if (producto != null)
+        {
+            // Limpiar el contenido anterior
+            container.Children.Clear();
+
+            // Mostrar los datos del producto
+            container.Children.Add(
+                new Label
+                {
+                    Text = producto.Nombre,
+                    FontSize = 22
+                });
+
+            container.Children.Add(
+                new Label
+                {
+                    Text = producto.Descripcion
+                });
+
+            container.Children.Add(
+                new Label
+                {
+                    Text = $"Precio: {producto.Precio}"
+                });
         }
     }
+
 }

@@ -24,6 +24,14 @@
                 Route="ProductPage" />
         </Tab>
 
+        <Tab Title="Help Support">
+            <ShellContent
+        x:Name="HelpSupportContent"
+        Title="Help Support"
+        Route="HelpSupportPage"
+        ContentTemplate="{DataTemplate views:HelpSupportPage}" />
+        </Tab>
+
     </FlyoutItem>
 
 </Shell>

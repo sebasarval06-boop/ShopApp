@@ -1,14 +1,67 @@
-﻿<?xml version = "1.0" encoding = "UTF-8" ?>
-<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ShopApp"
-             x:Class="ShopApp.App">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Application
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:data="clr-namespace:ShopApp.DataAcces"
+    xmlns:converters="clr-namespace:ShopApp.Converters"
+    x:Class="ShopApp.App">
+
     <Application.Resources>
         <ResourceDictionary>
+
+            <!-- Estilos existentes -->
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- Convertidor de colores -->
+            <converters:PrecioParaColorConverter
+                x:Key="PrecioParaColorConverter" />
+
+            <!-- Plantilla para mostrar productos -->
+            <DataTemplate
+                x:Key="ProductDataTemplate"
+                x:DataType="data:Product">
+
+                <Grid
+                    Padding="10"
+                    ColumnDefinitions="*,Auto"
+                    ColumnSpacing="15">
+
+                    <!-- Nombre y descripción -->
+                    <VerticalStackLayout
+                        Grid.Column="0"
+                        Spacing="5">
+
+                        <Label
+                            Text="{Binding Nombre}"
+                            FontSize="16"
+                            FontAttributes="Bold" />
+
+                        <Label
+                            Text="{Binding Descripcion}"
+                            FontSize="13"
+                            TextColor="Gray" />
+
+                    </VerticalStackLayout>
+
+                    <!-- Precio con color automático -->
+                    <Label
+                        Grid.Column="1"
+                        Text="{Binding Precio, StringFormat='{0:C}'}"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        TextColor="{Binding Precio,
+                            Converter={StaticResource PrecioParaColorConverter}}" />
+
+                </Grid>
+
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
+
 </Application>

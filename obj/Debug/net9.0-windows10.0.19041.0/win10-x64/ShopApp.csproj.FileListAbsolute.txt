@@ -518,3 +518,13 @@ C:\Users\Samsung\source\repos\ShopApp\ShopApp\obj\Debug\net9.0-windows10.0.19041
 C:\Users\Samsung\source\repos\ShopApp\ShopApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\Samsung\source\repos\ShopApp\ShopApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Samsung\source\repos\ShopApp\ShopApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\ShopApp.sourcelink.json
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Data.Sqlite.dll
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Samsung\source\repos\ShopApp\ShopApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll

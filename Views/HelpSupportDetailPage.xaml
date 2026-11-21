@@ -1,12 +1,175 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ShopApp.Views.HelpSupportDetailPage"
-             Title="HelpSupportDetailPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ShopApp.Views.HelpSupportDetailPage"
+    Title="Cliente Detalle">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <!-- TITULO PRINCIPAL -->
+            <Label
+                Text="Productos adicionales"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <!-- SELECCIONAR PRODUCTO -->
+            <Label
+                Text="Seleccione un producto:"
+                FontSize="16" />
+
+            <Picker
+                Title="Seleccionar producto"
+                ItemsSource="{Binding Products}"
+                ItemDisplayBinding="{Binding Nombre}"
+                SelectedItem="{Binding ProductoSeleccionado, Mode=TwoWay}" />
+
+            <!-- CANTIDAD DE PRODUCTOS -->
+            <Label
+                Text="Cantidad de productos:"
+                FontSize="16" />
+
+            <HorizontalStackLayout Spacing="15">
+
+                <Stepper
+                    Minimum="1"
+                    Maximum="100"
+                    Increment="1"
+                    Value="{Binding Cantidad, Mode=TwoWay}" />
+
+                <Label
+                    Text="{Binding Cantidad, StringFormat='Cantidad: {0:F0}'}"
+                    VerticalOptions="Center"
+                    FontSize="18" />
+
+            </HorizontalStackLayout>
+
+            <!-- DETALLE DEL PRODUCTO -->
+            <Label
+                Text="Detalle del producto"
+                FontSize="20"
+                FontAttributes="Bold" />
+
+            <!-- Nombre -->
+            <Label
+                Text="{Binding ProductoSeleccionado.Nombre}"
+                FontSize="18"
+                FontAttributes="Bold" />
+
+            <!-- Descripcion -->
+            <Label
+                Text="{Binding ProductoSeleccionado.Descripcion}"
+                FontSize="14" />
+
+            <!-- Precio con convertidor de colores -->
+            <Label
+                Text="{Binding ProductoSeleccionado.Precio,
+                       StringFormat='Precio: {0:C}'}"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="{Binding ProductoSeleccionado.Precio,
+                    Converter={StaticResource PrecioParaColorConverter}}" />
+
+            <!-- NUEVO: BOTON AGREGAR COMPRA -->
+            <Button
+                Text="Agregar compra"
+                BackgroundColor="#2563EB"
+                TextColor="White"
+                FontAttributes="Bold"
+                HeightRequest="50"
+                Command="{Binding AddCommand}" />
+
+            <!-- LISTA DE COMPRAS REGISTRADAS -->
+
+            <Label
+    Text="Compras registradas"
+    FontSize="20"
+    FontAttributes="Bold"
+    Margin="0,15,0,0" />
+
+            <CollectionView
+    ItemsSource="{Binding Compras}"
+    HeightRequest="200"
+    EmptyView="Todavía no hay compras registradas.">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Border
+                Stroke="LightGray"
+                StrokeThickness="1"
+                Padding="12"
+                Margin="0,5">
+
+                            <VerticalStackLayout Spacing="5">
+
+
+                                <!-- ID DEL CLIENTE -->
+                                <Label
+    Text="{Binding ClientId, StringFormat='Cliente ID: {0}'}"
+    FontAttributes="Bold"
+    TextColor="Blue" />
+
+                                <!-- ID DEL PRODUCTO -->
+                                <Label
+    Text="{Binding ProductId, StringFormat='Producto ID: {0}'}"
+    FontAttributes="Bold" />
+
+                                <!-- CANTIDAD COMPRADA -->
+                                <Label
+    Text="{Binding Cantidad, StringFormat='Cantidad: {0}'}" />
+
+                                <!-- TOTAL DE LA COMPRA -->
+                                <Label
+    Text="{Binding Total, StringFormat='Total: {0:C}'}"
+    TextColor="Green"
+    FontAttributes="Bold" />
+
+                                <!-- FECHA DE COMPRA -->
+                                <Label
+    Text="{Binding Fecha, StringFormat='Fecha: {0:dd/MM/yyyy HH:mm}'}"
+    FontSize="12"
+    TextColor="Gray" />
+
+
+                            </VerticalStackLayout>
+
+                        </Border>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <!-- SEPARADOR -->
+            <BoxView
+                HeightRequest="1"
+                BackgroundColor="LightGray"
+                Margin="0,15,0,10" />
+
+            <!-- CATALOGO DE PRODUCTOS -->
+            <Label
+                Text="Catálogo de productos"
+                FontSize="20"
+                FontAttributes="Bold" />
+
+            <!-- LISTA CON DATATEMPLATE -->
+            <CollectionView
+                ItemsSource="{Binding Products}"
+                ItemTemplate="{StaticResource ProductDataTemplate}"
+                HeightRequest="350"
+                SelectionMode="None" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
 </ContentPage>
